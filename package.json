@@ -1,0 +1,20 @@
+{
+  "name": "social_network",
+  "version": "1.0.0",
+  "description": "social network API using mongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server",
+    "dev": "nodemon index",
+    "seed": "node utils/seed"
+  },
+  "author": "Hazel",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.10.0",
+    "nodemon": "^2.0.20"
+  }
+}
