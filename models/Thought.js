@@ -41,6 +41,13 @@ thoughtSchema
     return this.reactions.length;
   });
 
+  thoughtSchema
+  .virtual('formatDate')
+  // Getter
+  .get(function () {
+    return this.createdAt.toDateString();
+  });
+
 // Initialize our Thought model
 const Thought = model('thought', thoughtSchema);
 

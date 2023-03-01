@@ -5,18 +5,13 @@ const userSchema = new Schema(
   {
     first: String,
     last: String,
-    // age: Number,
+    username: String,
+    email: String,
     thoughts: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: 'Thought',
-      },
+     String
     ],
     friends: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: 'User',
-      }
+      String
     ]
   },
   {
@@ -30,20 +25,20 @@ const userSchema = new Schema(
 );
 
 // Create a virtual property `fullName` that gets and sets the user's full name
-userSchema
-  .virtual('username')
-  // Getter
-  .get(function () {
-    return `${this.first} ${this.last}`;
-  })
-  // Setter to set the first and last name
-  .set(function (v) {
-    const first = v.split(' ')[0];
-    const last = v.split(' ')[1];
-    this.set({ first, last });
-  });
+// userSchema
+//   .virtual('username')
+//   // Getter
+//   .get(function () {
+//     return `${this.first} ${this.last}`;
+//   })
+//   // Setter to set the first and last name
+//   .set(function (v) {
+//     const first = v.split(' ')[0];
+//     const last = v.split(' ')[1];
+//     this.set({ first, last });
+//   });
 
-  userSchema
+userSchema
   .virtual('friendCount')
   // Getter
   .get(function () {
