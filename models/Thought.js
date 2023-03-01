@@ -4,19 +4,19 @@ const Reaction = require('./Reaction');
 // Schema to create model
 const thoughtSchema = new Schema(
   {
-    published: {
-      type: Boolean,
-      default: false,
-    },
+    // published: {
+    //   type: Boolean,
+    //   default: false,
+    // },
     createdAt: {
       type: Date,
       default: Date.now,
     },
-    buildSuccess: {
-      type: Boolean,
-      default: true,
-    },
-    description: {
+    // buildSuccess: {
+    //   type: Boolean,
+    //   default: true,
+    // },
+    thoughtText: {
       type: String,
       minLength: 1,
       maxLength: 280,

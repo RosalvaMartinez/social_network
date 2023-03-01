@@ -90,21 +90,12 @@ const names = [
   ];
   
   const possibleReactions = [
-    'html',
-    'css',
-    'javascript',
-    'typescript',
-    'go',
-    'cpp',
-    'python',
-    'rust',
-    'React',
-    'React Native',
-    'NextJS',
-    'Tailwind',
-    'Vue',
-    'mongodb',
-    'sql',
+    'love',
+    'dislike',
+    'like',
+    'awesome',
+    'funny',
+    'great',
   ];
   
   const users = [];
@@ -121,9 +112,7 @@ const names = [
     let results = [];
     for (let i = 0; i < int; i++) {
       results.push({
-        published: Math.random() < 0.5,
-        description: getRandomArrItem(thoughtDescriptions),
-        buildSuccess: Math.random() < 0.5,
+        thoughtText: getRandomArrItem(thoughtDescriptions),
         reactions: [...getThoughtReactions(3)],
       });
     }

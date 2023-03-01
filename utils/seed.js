@@ -20,7 +20,6 @@ connection.once('open', async () => {
     users.push({
       first,
       last,
-      age: Math.floor(Math.random() * (99 - 18 + 1) + 18),
     });
   }
 
